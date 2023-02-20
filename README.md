@@ -1,5 +1,5 @@
 # OpenSea Twitter Scraper
-ye saw people sell this for thousands so here it is - doesn't include address scraper though
+ye saw people sell this for thousands so here it is - doesn't include address scraper though (this can be optimized like adding threads)
 
 ### `⚙️` Setup
 - Star this project 
