@@ -11,7 +11,7 @@ class Scraper:
         for address in self.addresses:
             response = self.session.get(
                 url = f"https://opensea.io/{address}",
-                proxies = self.proxies if self.proxies != '' else None,
+                proxies = {"http": f"http://{self.proxies}", "https": f"http://{self.proxies}"} if self.proxies != '' else None,
                 timeout = 20
             )
 
