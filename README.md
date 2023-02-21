@@ -1,10 +1,13 @@
 # OpenSea Twitter Scraper
-ye saw people sell this for thousands so here it is - doesn't include address scraper though (this can be optimized by like adding threads)
+OpenSea Twitter Scraper
 
 ### `⚙️` Setup
 - Star this project 
 - Run the following command in CMD: `pip install cloudscraper`
+- Input your proxies in `./proxies.txt`
+- Input your addresses in `./addresses.txt`
 - CD into the dir of the project and run `python3 main.py`
+- Input the amount of threads when prompted to
 
 ## `📺` Demo
 https://user-images.githubusercontent.com/105955582/220207530-466fb360-c87e-400b-89d5-1ebd9b1a0754.mp4
