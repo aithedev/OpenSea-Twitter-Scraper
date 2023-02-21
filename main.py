@@ -3,7 +3,7 @@
 
 import cloudscraper
 import random
-import re
+import bs4
 
 class Scraper:
     def __init__(self) -> None:
@@ -22,7 +22,9 @@ class Scraper:
 
             if response.status_code == 200:
                 if "https://twitter.com/" in response.text:
-                    twitter = re.search('<a class="sc-1f719d57-0 fKAlPV" href="https://twitter.com/(.*)" rel="nofollow noopener" target="_blank">', response.text).group(1)
+                    parser = bs4.BeautifulSoup(response.text, "html.parser")
+                    for a in parser.find_all('a', {"class": "sc-1f719d57-0 fKAlPV"}):
+                        twitter = a.get('href').replace("https://twitter.com/","")
                     if "@opensea" not in twitter:
                         print(f"[+] {address} -> {twitter}")
                         open("./twitters.txt", "a+").write(twitter+"\n")
