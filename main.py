@@ -9,7 +9,7 @@ class Scraper:
     def start(self):
         for address in self.addresses:
             response = self.session.get(
-                url = f"https://opensea.io/{address}"
+                url = f"https://opensea.io/{address}",
                 timeout = 20
             )
 
