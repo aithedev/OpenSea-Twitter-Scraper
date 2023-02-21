@@ -5,13 +5,11 @@ class Scraper:
     def __init__(self) -> None:
         self.session = cloudscraper.create_scraper()
         self.addresses = open("./addresses.txt", "r").read().splitlines()
-        self.proxies =  open("./proxies.txt", "r").read().splitlines() 
 
     def start(self):
         for address in self.addresses:
             response = self.session.get(
-                url = f"https://opensea.io/{address}",
-                proxies = {"http": f"http://{self.proxies}", "https": f"http://{self.proxies}"} if self.proxies != '' else None,
+                url = f"https://opensea.io/{address}"
                 timeout = 20
             )
 
