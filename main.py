@@ -24,7 +24,7 @@ class Scraper:
                 if "https://twitter.com/" in response.text:
                     parser = bs4.BeautifulSoup(response.text, "html.parser")
                     for a in parser.find_all('a', {"class": "sc-1f719d57-0 fKAlPV"}):
-                        twitter = a.get('href').replace("https://twitter.com/", "").replace("@", "")
+                        twitter = a.get('href').replace("https://twitter.com/", "")
                     if "@opensea" not in twitter:
                         print(f"[+] {address} -> {twitter}")
                         open("./twitters.txt", "a+").write(twitter+"\n")
