@@ -1,5 +1,5 @@
 # OpenSea Twitter Scraper
-OpenSea Twitter Scraper
+OpenSea Twitter Scraper - You are not allowed to sell this. 
 
 ### `⚙️` Setup
 - Star this project 
