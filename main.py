@@ -1,15 +1,22 @@
+# aithe.dev
+# github.com/aithedev/opensea-twitter-scraper
+
 import cloudscraper
+import random
 import re
 
 class Scraper:
     def __init__(self) -> None:
         self.session = cloudscraper.create_scraper()
         self.addresses = open("./addresses.txt", "r").read().splitlines()
+        self.proxies = open("./proxies.txt", "r").read().splitlines()
 
-    def start(self):
+
+    def scrape(self):
         for address in self.addresses:
             response = self.session.get(
                 url = f"https://opensea.io/{address}",
+                proxies = {"http": f"http://{random.choice(self.proxies)}", "https": f"http://{random.choice(self.proxies)}"},
                 timeout = 20
             )
 
@@ -26,5 +33,6 @@ class Scraper:
             else:
                 print(response.text)
 
+
 if __name__ == "__main__":
-    Scraper().start()
+    Scraper().scrape()
