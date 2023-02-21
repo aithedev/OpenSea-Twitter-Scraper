@@ -11,7 +11,9 @@ OpenSea Twitter Scraper - Scrapes the Twitters of OpenSea users if they have one
 
 ## `📺` Demo
 
-https://user-images.githubusercontent.com/105955582/220390299-eaf5af90-d7d7-4142-a267-1e05cda6c031.mp4
+
+https://user-images.githubusercontent.com/105955582/220395024-f0f7d090-6a26-4d4a-9e6c-72cb17cf41c9.mp4
+
 
 
 
