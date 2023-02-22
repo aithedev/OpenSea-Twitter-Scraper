@@ -1,4 +1,4 @@
-# aithe.dev
+# www.aithe.dev
 # github.com/aithedev/opensea-twitter-scraper
 
 from random import choice
@@ -38,7 +38,7 @@ class Scraper:
                     else:
                         print(f'[-] {address} -> Twitter Not Found')
             else:
-                print(f'[-] {address} -> Failed getting {address}\'s twitter | {response.status_code}')
+                print(f'[-] {address} -> Failed getting Twitter | {response.status_code}')
 
 
 if __name__ == '__main__':
