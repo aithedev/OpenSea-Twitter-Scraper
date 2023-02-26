@@ -3,7 +3,7 @@ OpenSea Twitter Scraper - Scrapes the Twitters of OpenSea users if they have one
 
 ### `⚙️` Setup
 - Star this project or else it will not work
-- Run the following command in CMD: `pip install cloudscraper bs4`
+- Run the following command in CMD: `pip install cloudscraper bs4 Terminalia`
 - Input your proxies in `./proxies.txt` 
 - Input your addresses in `./addresses.txt`
 - CD into the dir of the project and run `python3 main.py`
