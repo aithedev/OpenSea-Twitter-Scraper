@@ -4,7 +4,7 @@
 import cloudscraper
 import random
 import bs4
-from Terminalia import Terminal, Color
+from Terminalia import Color
 
 class Scraper:
     def __init__(self) -> None:
@@ -27,12 +27,12 @@ class Scraper:
                     for a in parser.find_all('a', {"class": "sc-1f719d57-0 fKAlPV"}):
                         twitter = a.get('href').replace("https://twitter.com/", "")
                     if "@opensea" not in twitter:
-                        print(f"{Terminal.Color(f'[+] {address} -> {twitter}', Color.GREEN)}")
+                        print(f"{Color.GREEN}[+] {address} -> {twitter}{Color.RESET}")
                         open("./twitters.txt", "a+").write(twitter+"\n")
                     else:
-                        print(f"{Terminal.Color(f'[-] {address} -> Twitter Not Found', Color.RED)}")
+                        print(f"{Color.RED}[-] {address} -> Twitter Not Found{Color.RESET}")
                 else:
-                    print(f"{Terminal.Color(f'[-] {address} -> Twitter Not Found', Color.RED)}")
+                    print(f"{Color.RED}[-] {address} -> Twitter Not Found{Color.RESET}")
             else:
                 print(response.text)
 
